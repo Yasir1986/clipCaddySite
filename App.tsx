@@ -11,7 +11,7 @@ import { FEATURES } from './data';
 
 const App: React.FC = () => {
   const [showDemo, setShowDemo] = useState(false);
-  const [view, setView] = useState('home'); // 'home', 'privacy', 'terms'
+  const [view, setView] = useState('home');
   
   // Animation state for features
   const [featuresVisible, setFeaturesVisible] = useState(false);
