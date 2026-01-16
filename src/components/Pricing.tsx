@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Check, Star, Trash2, Heart, MousePointerClick } from 'lucide-react';
-import { PRO_FEATURES } from '../data';
+import { PRO_FEATURES } from '../../data';
 
 const Pricing: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

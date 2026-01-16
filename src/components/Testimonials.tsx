@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { TESTIMONIALS } from '../data';
+import { TESTIMONIALS } from '../../data';
 
 const Testimonials: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

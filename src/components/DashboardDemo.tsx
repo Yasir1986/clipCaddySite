@@ -4,8 +4,8 @@ import {
   Trash2, Star, Settings, FileText, Lock, X,
   ClipboardPaste, Zap
 } from 'lucide-react';
-import { Clip } from '../types';
-import { MOCK_CLIPS } from '../data';
+import { Clip } from '../../types';
+import { MOCK_CLIPS } from '../../data';
 
 interface DashboardDemoProps {
   onClose: () => void;

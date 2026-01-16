@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
-import DashboardDemo from './components/DashboardDemo';
-import Privacy from './components/Privacy';
-import Terms from './components/Terms';
+import Navbar from '../clipcaddy site/src/components/Navbar';
+import Hero from '../clipcaddy site/src/components/Hero';
+import Pricing from '../clipcaddy site/src/components/Pricing';
+import Testimonials from '../clipcaddy site/src/components/Testimonials';
+import DashboardDemo from '../clipcaddy site/src/components/DashboardDemo';
+import Privacy from '../clipcaddy site/src/components/Privacy';
+import Terms from '../clipcaddy site/src/components/Terms';
 import { Layers, Twitter, Github, Linkedin, Heart } from 'lucide-react';
 import { FEATURES } from './data';
 
