@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, AlertCircle, HelpCircle } from 'lucide-react';
+import { FiFileText, FiAlertCircle, FiHelpCircle } from 'react-icons/fi';
 
 const Terms: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ const Terms: React.FC = () => {
         <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
            <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-amber-500/20 rounded-lg">
-              <AlertCircle className="w-6 h-6 text-amber-500" />
+              <FiAlertCircle className="w-6 h-6 text-amber-500" />
             </div>
             <h2 className="text-xl font-bold text-white">3. Disclaimer</h2>
           </div>

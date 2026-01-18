@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Check, Star, Trash2, Heart, MousePointerClick } from 'lucide-react';
+import { FiCheck, FiStar, FiTrash2, FiHeart, FiMousePointer } from 'react-icons/fi';
 import { PRO_FEATURES } from '../../data';
 
 const Pricing: React.FC = () => {
@@ -51,25 +51,25 @@ const Pricing: React.FC = () => {
             <ul className="mt-8 space-y-4 flex-1">
               <li className="flex items-center text-slate-300">
                 <div className="bg-slate-800 p-1 rounded-full mr-3">
-                  <Check className="h-4 w-4 text-slate-400" />
+                  <FiCheck className="h-4 w-4 text-slate-400" />
                 </div>
                 10 items history limit
               </li>
               <li className="flex items-center text-slate-300">
                 <div className="bg-slate-800 p-1 rounded-full mr-3">
-                  <Trash2 className="h-4 w-4 text-slate-400" />
+                  <FiTrash2 className="h-4 w-4 text-slate-400" />
                 </div>
                 Delete clips
               </li>
               <li className="flex items-center text-slate-300">
                 <div className="bg-slate-800 p-1 rounded-full mr-3">
-                  <Heart className="h-4 w-4 text-slate-400" />
+                  <FiHeart className="h-4 w-4 text-slate-400" />
                 </div>
                 Favorites
               </li>
               <li className="flex items-center text-slate-300">
                 <div className="bg-slate-800 p-1 rounded-full mr-3">
-                  <MousePointerClick className="h-4 w-4 text-slate-400" />
+                  <FiMousePointer className="h-4 w-4 text-slate-400" />
                 </div>
                 Right-click "Copy to ClipCaddy"
               </li>
@@ -93,7 +93,7 @@ const Pricing: React.FC = () => {
               {PRO_FEATURES.map((feature, index) => (
                 <li key={index} className="flex items-center text-white">
                   <div className="bg-primary/20 p-1 rounded-full mr-3">
-                    <Check className="h-4 w-4 text-primary" />
+                    <FiCheck className="h-4 w-4 text-primary" />
                   </div>
                   {feature.text}
                 </li>
@@ -109,7 +109,7 @@ const Pricing: React.FC = () => {
           <div className={`relative rounded-2xl border border-primary/50 bg-gradient-to-b from-slate-900 to-slate-900/80 p-8 shadow-2xl shadow-primary/10 flex flex-col transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-primary to-secondary text-white shadow-lg">
-                <Star className="w-3 h-3 mr-1 fill-current" />
+                <FiStar className="w-3 h-3 mr-1 fill-current" />
                 Best Value
               </span>
             </div>

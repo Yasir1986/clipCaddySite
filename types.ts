@@ -1,4 +1,4 @@
-import { LucideIcon } from 'lucide-react';
+import type { IconType } from 'react-icons';
 
 export interface Clip {
   id: string;
@@ -26,6 +26,7 @@ export interface Feature {
   title: string;
   desc: string;
   color: string;
+  icon: IconType;
 }
 
 export interface Testimonial {
@@ -36,6 +37,6 @@ export interface Testimonial {
 }
 
 export interface ProFeature {
-  icon: LucideIcon;
+  icon: IconType; // ✅ react-icons compatible
   text: string;
 }

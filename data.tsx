@@ -1,13 +1,44 @@
 import { Infinity, Zap, Folder, Cloud, BarChart3, Shield } from 'lucide-react';
 import { Feature, Testimonial, ProFeature, Clip } from './types';
+import { IconBaseProps } from 'react-icons';
 
 export const FEATURES: Feature[] = [
-  { title: "Smart Tagging", desc: "AI automatically categorizes your clips into Code, Links, or Text.", color: "bg-blue-500" },
-  { title: "Cloud Sync", desc: "Access your clipboard on iPhone, Mac, and Windows instantly.", color: "bg-purple-500" },
-  { title: "Secure Encryption", desc: "Your data is encrypted end-to-end. We can't read your clipboard.", color: "bg-green-500" },
-  { title: "Quick Paste", desc: "Access your frequent clips instantly with global hotkeys.", color: "bg-amber-500" },
-  { title: "Custom Templates", desc: "Create dynamic templates with variables for repetitive responses.", color: "bg-pink-500" },
-  { title: "Rich Content", desc: "Save images, formatted text, and code blocks without losing quality.", color: "bg-cyan-500" }
+  {
+    title: "Smart Tagging", desc: "AI automatically categorizes your clips into Code, Links, or Text.", color: "bg-blue-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  },
+  {
+    title: "Cloud Sync", desc: "Access your clipboard on iPhone, Mac, and Windows instantly.", color: "bg-purple-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  },
+  {
+    title: "Secure Encryption", desc: "Your data is encrypted end-to-end. We can't read your clipboard.", color: "bg-green-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  },
+  {
+    title: "Quick Paste", desc: "Access your frequent clips instantly with global hotkeys.", color: "bg-amber-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  },
+  {
+    title: "Custom Templates", desc: "Create dynamic templates with variables for repetitive responses.", color: "bg-pink-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  },
+  {
+    title: "Rich Content", desc: "Save images, formatted text, and code blocks without losing quality.", color: "bg-cyan-500",
+    icon: function (props: IconBaseProps) {
+      throw new Error('Function not implemented.');
+    }
+  }
 ];
 
 export const PRO_FEATURES: ProFeature[] = [

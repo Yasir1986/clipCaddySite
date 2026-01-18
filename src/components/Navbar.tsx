@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, Menu, X, ArrowRight } from 'lucide-react';
+import { FiLayers, FiMenu, FiX, FiArrowRight } from 'react-icons/fi';
 
 interface NavbarProps {
   onLaunchDemo: () => void;
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLaunchDemo, onNavigate, currentView }
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 cursor-pointer" onClick={handleLogoClick}>
             <div className="bg-gradient-to-br from-primary to-secondary p-2 rounded-lg">
-              <Layers className="h-6 w-6 text-white" />
+              <FiLayers className="h-6 w-6 text-white" />
             </div>
             <span className="font-bold text-xl tracking-tight text-white">ClipCaddy</span>
           </div>
@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLaunchDemo, onNavigate, currentView }
               className="bg-white text-slate-900 hover:bg-slate-100 px-4 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 group"
             >
               Launch App
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              <FiArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
 
@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLaunchDemo, onNavigate, currentView }
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700 focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
             </button>
           </div>
         </div>

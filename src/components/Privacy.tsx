@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Eye, FileText } from 'lucide-react';
+import { FiShield, FiLock, FiEye, FiFileText } from 'react-icons/fi';
 
 const Privacy: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Privacy: React.FC = () => {
         <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-primary/20 rounded-lg">
-              <Shield className="w-6 h-6 text-primary" />
+              <FiShield className="w-6 h-6 text-primary" />
             </div>
             <h2 className="text-xl font-bold text-white">1. Data Collection</h2>
           </div>
@@ -30,7 +30,7 @@ const Privacy: React.FC = () => {
         <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
            <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-green-500/20 rounded-lg">
-              <Lock className="w-6 h-6 text-green-500" />
+              <FiLock className="w-6 h-6 text-green-500" />
             </div>
             <h2 className="text-xl font-bold text-white">2. End-to-End Encryption</h2>
           </div>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Search, Plus, Copy, Image as ImageIcon, Link as LinkIcon, 
-  Trash2, Star, Settings, FileText, Lock, X,
-  ClipboardPaste, Zap
-} from 'lucide-react';
+  FiSearch, FiPlus, FiCopy, FiImage, FiLink, 
+  FiTrash2, FiStar, FiSettings, FiFileText, FiLock, FiX,
+  FiZap
+} from 'react-icons/fi';
+import { FaPaste } from 'react-icons/fa';
 import { Clip } from '../../types';
 import { MOCK_CLIPS } from '../../data';
 
@@ -89,14 +90,14 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
           onClick={onClose}
           className="absolute top-4 right-4 z-50 p-2 bg-slate-800 text-slate-400 hover:text-white rounded-full hover:bg-red-500/20 transition-colors"
         >
-          <X className="w-5 h-5" />
+          <FiX className="w-5 h-5" />
         </button>
 
         {/* Sidebar */}
         <div className="w-full md:w-64 bg-slate-950 border-r border-slate-800 flex-shrink-0 flex flex-col">
           <div className="p-6 flex items-center gap-2">
              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <ClipboardPaste className="text-white w-5 h-5" />
+                <FaPaste className="text-white w-5 h-5" />
              </div>
              <span className="font-bold text-white text-lg">ClipCaddy</span>
           </div>
@@ -112,10 +113,10 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                     : 'text-slate-400 hover:bg-slate-900 hover:text-slate-200'
                 }`}
               >
-                {cat === 'All' && <ClipboardPaste className="mr-3 h-4 w-4" />}
-                {cat === 'Favorites' && <Star className="mr-3 h-4 w-4" />}
-                {cat === 'Links' && <LinkIcon className="mr-3 h-4 w-4" />}
-                {cat === 'Images' && <ImageIcon className="mr-3 h-4 w-4" />}
+                {cat === 'All' && <FaPaste className="mr-3 h-4 w-4" />}
+                {cat === 'Favorites' && <FiStar className="mr-3 h-4 w-4" />}
+                {cat === 'Links' && <FiLink className="mr-3 h-4 w-4" />}
+                {cat === 'Images' && <FiImage className="mr-3 h-4 w-4" />}
                 {cat}
               </button>
             ))}
@@ -147,7 +148,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
           {/* Top Bar */}
           <div className="h-16 border-b border-slate-800 flex items-center px-6 gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+              <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
               <input 
                 type="text" 
                 placeholder="Search clips..." 
@@ -155,7 +156,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
               />
             </div>
             <button className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800">
-              <Settings className="w-5 h-5" />
+              <FiSettings className="w-5 h-5" />
             </button>
           </div>
 
@@ -171,7 +172,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                 className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-4 text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all shadow-lg"
               />
               <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-primary text-white rounded-lg hover:bg-indigo-600 transition-colors">
-                <Plus className="w-4 h-4" />
+                <FiPlus className="w-4 h-4" />
               </button>
             </form>
           </div>
@@ -192,9 +193,9 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                   <div key={clip.id} className="group bg-slate-800/40 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl p-4 transition-all animate-in fade-in slide-in-from-bottom-2 duration-300">
                     <div className="flex items-start gap-4">
                       <div className={`mt-1 p-2 rounded-lg ${clip.type === 'code' ? 'bg-blue-500/10 text-blue-400' : 'bg-slate-700/50 text-slate-400'}`}>
-                        {clip.type === 'link' ? <LinkIcon className="w-4 h-4" /> : 
-                        clip.type === 'code' ? <Zap className="w-4 h-4" /> :
-                        <FileText className="w-4 h-4" />}
+                        {clip.type === 'link' ? <FiLink className="w-4 h-4" /> : 
+                        clip.type === 'code' ? <FiZap className="w-4 h-4" /> :
+                        <FiFileText className="w-4 h-4" />}
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-slate-200 text-sm font-medium leading-relaxed break-all font-mono">
@@ -216,16 +217,16 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                           onClick={() => handlePin(clip.id)}
                           className={`p-2 rounded-lg hover:bg-slate-700 transition-colors ${clip.isPinned ? 'text-yellow-400 opacity-100' : 'text-slate-400'}`}
                         >
-                          <Star className={`w-4 h-4 ${clip.isPinned ? 'fill-yellow-400' : ''}`} />
+                          <FiStar className={`w-4 h-4 ${clip.isPinned ? 'fill-yellow-400' : ''}`} />
                         </button>
                         <button className="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors">
-                          <Copy className="w-4 h-4" />
+                          <FiCopy className="w-4 h-4" />
                         </button>
                         <button 
                           onClick={() => handleDelete(clip.id)}
                           className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <FiTrash2 className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
@@ -235,7 +236,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                 {filteredClips.length === 0 && !isLoading && (
                   <div className="text-center py-20">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-800 mb-4">
-                      <ClipboardPaste className="w-8 h-8 text-slate-600" />
+                      <FaPaste className="w-8 h-8 text-slate-600" />
                     </div>
                     <h3 className="text-slate-300 font-medium">Clipboard is empty</h3>
                     <p className="text-slate-500 text-sm mt-1">Start copying text to see it appear here.</p>
@@ -250,7 +251,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
         <div className="hidden lg:flex w-80 bg-slate-950 border-l border-slate-800 flex-col">
           <div className="p-4 border-b border-slate-800">
              <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-               <Zap className="w-4 h-4 text-yellow-400" />
+               <FiZap className="w-4 h-4 text-yellow-400" />
                Quick Paste <span className="text-[10px] font-bold bg-gradient-to-r from-primary to-secondary px-1.5 py-0.5 rounded text-white ml-auto">PRO</span>
              </h3>
           </div>
@@ -268,7 +269,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                  <div className="h-2 bg-slate-700 rounded w-full"></div>
                </div>
                <button className="w-full py-2 border border-dashed border-slate-700 text-slate-500 rounded-lg text-sm flex items-center justify-center gap-2">
-                 <Plus className="w-4 h-4" /> Add Template
+                 <FiPlus className="w-4 h-4" /> Add Template
                </button>
              </div>
 
@@ -276,7 +277,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
              {!isProMode && (
                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
                  <div className="bg-slate-800 p-3 rounded-full mb-3 shadow-xl">
-                   <Lock className="w-6 h-6 text-primary" />
+                   <FiLock className="w-6 h-6 text-primary" />
                  </div>
                  <h4 className="text-white font-medium mb-1">Pro Feature</h4>
                  <p className="text-xs text-slate-400 mb-4">Create unlimited quick-paste templates and access analytics.</p>
@@ -301,7 +302,7 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
                       <div className="text-xs text-slate-500 truncate">https://zoom.us/j/123456...</div>
                     </button>
                     <button className="w-full py-2 border border-dashed border-slate-700 hover:border-primary text-slate-500 hover:text-primary rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
-                      <Plus className="w-4 h-4" /> Add Template
+                      <FiPlus className="w-4 h-4" /> Add Template
                     </button>
                    </div>
                 </div>
@@ -315,9 +316,9 @@ const DashboardDemo: React.FC<DashboardDemoProps> = ({ onClose }) => {
       {showUpsell && (
         <div className="absolute inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md animate-in fade-in duration-200">
           <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl relative">
-            <button onClick={() => setShowUpsell(false)} className="absolute top-4 right-4 text-slate-500 hover:text-white"><X className="w-5 h-5"/></button>
+            <button onClick={() => setShowUpsell(false)} className="absolute top-4 right-4 text-slate-500 hover:text-white"><FiX className="w-5 h-5"/></button>
             <div className="inline-flex p-3 rounded-full bg-primary/10 mb-4">
-              <Star className="w-8 h-8 text-primary fill-primary" />
+              <FiStar className="w-8 h-8 text-primary fill-primary" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Upgrade to Pro</h3>
             <p className="text-slate-400 mb-6 text-sm">Get access to Quick Paste templates, advanced analytics, and unlimited history.</p>

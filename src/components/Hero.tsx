@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Copy, CheckCircle2, Zap } from 'lucide-react';
+import { FiArrowRight, FiCopy, FiCheckCircle, FiZap } from 'react-icons/fi';
 
 interface HeroProps {
   onLaunchDemo: () => void;
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ onLaunchDemo }) => {
             className="px-8 py-4 bg-primary hover:bg-indigo-600 text-white rounded-xl font-semibold text-lg transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2 group"
           >
             Start for Free
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <a href="#pricing" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2">
             View Pricing
@@ -48,15 +48,15 @@ const Hero: React.FC<HeroProps> = ({ onLaunchDemo }) => {
         {/* Feature Ticks */}
         <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-slate-400 text-sm">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-green-400" />
+            <FiCheckCircle className="w-4 h-4 text-green-400" />
             <span>No credit card required</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-green-400" />
+            <FiCheckCircle className="w-4 h-4 text-green-400" />
             <span>Works on Mac & Windows</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-green-400" />
+            <FiCheckCircle className="w-4 h-4 text-green-400" />
             <span>Bank-level encryption</span>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({ onLaunchDemo }) => {
             <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[16/9] relative group cursor-default">
               <div className="absolute inset-0 flex items-center justify-center">
                  <div className="text-center">
-                    <Zap className="w-16 h-16 text-slate-700 mx-auto mb-4" />
+                    <FiZap className="w-16 h-16 text-slate-700 mx-auto mb-4" />
                     <p className="text-slate-500 text-lg">Interactive Dashboard Preview</p>
                     <button 
                       onClick={onLaunchDemo}

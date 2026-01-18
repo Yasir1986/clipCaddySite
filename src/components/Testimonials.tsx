@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { TESTIMONIALS } from '../../data';
 
 const Testimonials: React.FC = () => {
@@ -91,7 +92,7 @@ const Testimonials: React.FC = () => {
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-12 z-20 p-3 rounded-full bg-slate-900/80 backdrop-blur-sm border border-slate-700 text-slate-300 hover:text-white hover:bg-primary hover:border-primary transition-all shadow-lg active:scale-95 hidden md:flex items-center justify-center group-hover:opacity-100 opacity-70"
             aria-label="Previous testimonials"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <FiChevronLeft className="w-6 h-6" />
           </button>
 
           {/* Right Arrow Button */}
@@ -100,7 +101,7 @@ const Testimonials: React.FC = () => {
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 lg:translate-x-12 z-20 p-3 rounded-full bg-slate-900/80 backdrop-blur-sm border border-slate-700 text-slate-300 hover:text-white hover:bg-primary hover:border-primary transition-all shadow-lg active:scale-95 hidden md:flex items-center justify-center group-hover:opacity-100 opacity-70"
             aria-label="Next testimonials"
           >
-            <ChevronRight className="w-6 h-6" />
+            <FiChevronRight className="w-6 h-6" />
           </button>
 
           {/* Carousel Container */}
@@ -115,7 +116,7 @@ const Testimonials: React.FC = () => {
                 className="snap-center shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="h-full bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors relative group flex flex-col">
-                  <Quote className="absolute top-6 right-6 w-8 h-8 text-slate-800 group-hover:text-slate-700 transition-colors" />
+                  <FaQuoteLeft className="absolute top-6 right-6 w-8 h-8 text-slate-800 group-hover:text-slate-700 transition-colors" />
                   <p className="text-slate-300 mb-6 relative z-10 leading-relaxed flex-grow">"{t.quote}"</p>
                   <div className="flex items-center gap-4 mt-auto">
                     <img 
