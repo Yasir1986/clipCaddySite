@@ -1,4 +1,4 @@
-import type { IconType } from 'react-icons';
+import { IconType } from 'react-icons';
 
 export interface Clip {
   id: string;
@@ -37,6 +37,6 @@ export interface Testimonial {
 }
 
 export interface ProFeature {
-  icon: IconType; // ✅ react-icons compatible
+  icon: IconType;
   text: string;
 }
