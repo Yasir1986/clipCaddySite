@@ -6,14 +6,8 @@ import Testimonials from "../src/components/Testimonials";
 import DashboardDemo from "../src/components/DashboardDemo";
 import Privacy from "../src/components/Privacy";
 import Terms from "../src/components/Terms";
-import {
-  Layers,
-  GithubIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  Heart,
-} from "lucide-react";
 import { FEATURES } from "../data";
+import { FiGithub, FiHeart, FiLayers, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const App: React.FC = () => {
   const [showDemo, setShowDemo] = useState(false);
@@ -160,7 +154,7 @@ const App: React.FC = () => {
               }`}
             >
               <div className="flex items-center gap-2 mb-4">
-                <Layers className="h-6 w-6 text-primary" />
+                <FiLayers className="h-6 w-6 text-primary" />
                 <span className="font-bold text-xl text-white">ClipCaddy</span>
               </div>
               <p className="text-slate-500 text-sm">
@@ -233,19 +227,19 @@ const App: React.FC = () => {
                   href="#"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  <TwitterIcon className="w-5 h-5" />
+                  <FiTwitter className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  <GithubIcon className="w-5 h-5" />
+                  <FiGithub className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  <LinkedinIcon className="w-5 h-5" />
+                  <FiLinkedin className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -261,8 +255,16 @@ const App: React.FC = () => {
               © 2024 ClipCaddy Inc. All rights reserved.
             </p>
             <p className="text-slate-500 text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" />{" "}
-              by ClipCaddy Team
+              Made with{" "}
+              <FiHeart className="w-4 h-4 text-red-500 fill-red-500" />
+              <a
+                href="https://www.linkedin.com/in/yasir-akbar-2b534513b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary font-medium transition-colors"
+              >
+                Yasir Akbar
+              </a>
             </p>
           </div>
         </div>
