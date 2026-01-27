@@ -6,7 +6,7 @@ const Privacy: React.FC = () => {
     <div className="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <h1 className="text-3xl font-bold text-white sm:text-4xl mb-4">Privacy Policy</h1>
-        <p className="text-slate-400">Last updated: March 15, 2024</p>
+        <p className="text-slate-400">Last updated: January 20, 2026</p>
       </div>
 
       <div className="space-y-12 text-slate-300 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700">
@@ -18,12 +18,11 @@ const Privacy: React.FC = () => {
             <h2 className="text-xl font-bold text-white">1. Data Collection</h2>
           </div>
           <p className="mb-4">
-            At ClipCaddy, we take privacy seriously. We collect minimal data necessary to provide our services:
+            At ClipCaddy, we take privacy seriously. ClipCaddy does not collect, store, or transmit any personal data.
           </p>
           <ul className="list-disc pl-5 space-y-2 text-slate-400">
-            <li>Account information (email, name) for authentication.</li>
-            <li>Usage analytics (anonymized) to improve our product.</li>
-            <li>Device information for synchronization purposes.</li>
+            <li>All clipboard data stays locally on your device.</li>
+            <li>Pro features with cloud sync use end-to-end encryption.</li>
           </ul>
         </section>
 
@@ -49,29 +48,18 @@ const Privacy: React.FC = () => {
           </div>
         </section>
 
-        <section>
-          <h2 className="text-xl font-bold text-white mb-4">3. Data Usage</h2>
-          <p className="mb-4">
-            We use your data solely to:
-          </p>
-          <ul className="list-disc pl-5 space-y-2 text-slate-400">
-            <li>Provide, maintain, and improve the Service.</li>
-            <li>Process transactions and send related information.</li>
-            <li>Send technical notices, updates, and support messages.</li>
-          </ul>
-        </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">4. Third-Party Services</h2>
+          <h2 className="text-xl font-bold text-white mb-4">3. Third-Party Services</h2>
           <p>
             We may use third-party providers for infrastructure (e.g., AWS, Google Cloud) and payment processing (e.g., Stripe). These partners adhere to strict security standards.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">5. Contact Us</h2>
+          <h2 className="text-xl font-bold text-white mb-4">4. Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please contact us at <a href="#" className="text-primary hover:text-primary/80 transition-colors">privacy@clipcaddy.com</a>.
+            If you have any questions about this Privacy Policy, please contact us at <a href="#" className="text-primary hover:text-primary/80 transition-colors">yasir269050@gmail.com</a>.
           </p>
         </section>
       </div>
